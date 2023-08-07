@@ -6,7 +6,31 @@ notion-blog的免费gitalk博客留言板。
 # 步骤
 为了在Nuxt.js中集成Gitalk博客留言板，您需要遵循以下步骤：
 
-### 1. 安装所需的依赖
+### 1. 设置GitHub应用
+
+确保你在GitHub上创建了一个OAuth应用并将Client ID和Client Secret填入Gitalk的配置中。
+
+1. 登录您的GitHub账号
+首先，确保您已登录到GitHub。
+
+2. 创建一个新的OAuth应用
+在浏览器中，导航到：https://github.com/settings/applications/new 来创建一个新的OAuth应用。
+
+  - 填写必要的应用详情：
+    - `Application name`: 为您的应用命名。例如，可以命名为 "My Blog Gitalk Integration"。
+    - `Homepage URL`: 您博客的主页URL。
+    - `Application description`: 描述您的应用（可选）。
+    - `Authorization callback URL`: 这通常应设置为博客的URL。Gitalk在身份验证过程中会使用它。
+  - 点击"Register application"。
+
+
+3. 获取Client ID和Client Secret
+完成OAuth应用的注册后，您将被重定向到您的应用详情页面。在这里，您会看到Client ID和Client Secret。请确保妥善保存这些信息，但不要将Client Secret公之于众或存储在前端代码中。
+
+4. 在Gitalk配置中使用Client ID和Client Secret
+当您在Nuxt项目中配置Gitalk时，使用从上述步骤中获取的Client ID和Client Secret。
+
+### 2. 安装所需的依赖
 
 首先，你需要安装Gitalk：
 
@@ -14,7 +38,7 @@ notion-blog的免费gitalk博客留言板。
 npm install gitalk
 ```
 
-### 2. 创建一个Gitalk组件
+### 3. 创建一个Gitalk组件
 
 在你的Nuxt项目中，建立一个新的组件来容纳Gitalk。例如在 `components/GitalkComponent.vue`:
 
@@ -47,7 +71,7 @@ export default {
 </script>
 ```
 
-### 3. 在页面中集成Gitalk组件
+### 4. 在页面中集成Gitalk组件
 
 在你的Nuxt页面中，你可以简单地导入并使用Gitalk组件。例如，在 `pages/post/_id.vue`:
 
@@ -69,30 +93,6 @@ export default {
 }
 </script>
 ```
-
-### 4. 设置GitHub应用
-
-确保你在GitHub上创建了一个OAuth应用并将Client ID和Client Secret填入Gitalk的配置中。
-
-1. 登录您的GitHub账号
-首先，确保您已登录到GitHub。
-
-2. 创建一个新的OAuth应用
-在浏览器中，导航到：https://github.com/settings/applications/new 来创建一个新的OAuth应用。
-
-  - 填写必要的应用详情：
-    - `Application name`: 为您的应用命名。例如，可以命名为 "My Blog Gitalk Integration"。
-    - `Homepage URL`: 您博客的主页URL。
-    - `Application description`: 描述您的应用（可选）。
-    - `Authorization callback URL`: 这通常应设置为博客的URL。Gitalk在身份验证过程中会使用它。
-  - 点击"Register application"。
-
-
-3. 获取Client ID和Client Secret
-完成OAuth应用的注册后，您将被重定向到您的应用详情页面。在这里，您会看到Client ID和Client Secret。请确保妥善保存这些信息，但不要将Client Secret公之于众或存储在前端代码中。
-
-4. 在Gitalk配置中使用Client ID和Client Secret
-当您在Nuxt项目中配置Gitalk时，使用从上述步骤中获取的Client ID和Client Secret。
 
 ### 注意事项
 
