@@ -92,9 +92,9 @@ export default {
 完成OAuth应用的注册后，您将被重定向到您的应用详情页面。在这里，您会看到Client ID和Client Secret。请确保妥善保存这些信息，但不要将Client Secret公之于众或存储在前端代码中。
 
 4. 在Gitalk配置中使用Client ID和Client Secret
-当您在Nuxt项目中配置Gitalk时，使用从上述步骤中获取的Client ID和Client Secret。如我之前所述，为了安全考虑，Client Secret不应直接暴露在前端代码中。而应考虑使用后端服务来完成身份验证的交互，或考虑使用其他不需要Client Secret的评论系统。
+当您在Nuxt项目中配置Gitalk时，使用从上述步骤中获取的Client ID和Client Secret。
 
 ### 注意事项
 
-- 为了安全，不要在前端代码中暴露你的`clientSecret`。考虑使用服务器中间件或其他后端服务来隐藏这个秘密。
+- 为了安全，不要在前端代码中暴露你的`clientSecret`。考虑使用env环境参数或其他后端服务来隐藏这个秘密。
 - Gitalk使用GitHub issues作为评论。你所选择的仓库会存储所有的评论。
