@@ -81,13 +81,13 @@ export default {
 在浏览器中，导航到：https://github.com/settings/applications/new 来创建一个新的OAuth应用。
 
 填写必要的应用详情：
-```
-Application name: 为您的应用命名。例如，可以命名为 "My Blog Gitalk Integration"。
-Homepage URL: 您博客的主页URL。
-Application description: 描述您的应用（可选）。
-Authorization callback URL: 这通常应设置为博客的URL。Gitalk在身份验证过程中会使用它。
-点击"Register application"。
-```
+
+- Application name: 为您的应用命名。例如，可以命名为 "My Blog Gitalk Integration"。
+- Homepage URL: 您博客的主页URL。
+- Application description: 描述您的应用（可选）。
+- Authorization callback URL: 这通常应设置为博客的URL。Gitalk在身份验证过程中会使用它。
+- 点击"Register application"。
+
 
 3. 获取Client ID和Client Secret
 完成OAuth应用的注册后，您将被重定向到您的应用详情页面。在这里，您会看到Client ID和Client Secret。请确保妥善保存这些信息，但不要将Client Secret公之于众或存储在前端代码中。
