@@ -82,10 +82,10 @@ export default {
 
 填写必要的应用详情：
 
-- Application name: 为您的应用命名。例如，可以命名为 "My Blog Gitalk Integration"。
-- Homepage URL: 您博客的主页URL。
-- Application description: 描述您的应用（可选）。
-- Authorization callback URL: 这通常应设置为博客的URL。Gitalk在身份验证过程中会使用它。
+- `Application name`: 为您的应用命名。例如，可以命名为 "My Blog Gitalk Integration"。
+- `Homepage URL`: 您博客的主页URL。
+- `Application description`: 描述您的应用（可选）。
+- `Authorization callback URL`: 这通常应设置为博客的URL。Gitalk在身份验证过程中会使用它。
 - 点击"Register application"。
 
 
