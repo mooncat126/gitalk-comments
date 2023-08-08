@@ -1,3 +1,5 @@
+[English](README_en.md) | [中文](README.md)
+
 # gitalk-comments
 notion-blog的免费gitalk博客留言板。
 
